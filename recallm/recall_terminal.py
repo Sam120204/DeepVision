@@ -28,6 +28,7 @@ def check_input_valid(user_input, recallm):
     return valid_input
 
 if __name__ == "__main__":
+    
     print(f'Please wait - Initializing...', end="", flush=True)
 
     #################################################################################
@@ -58,7 +59,7 @@ if __name__ == "__main__":
         os.environ['OPENAI_API_KEY'] = api_keys['open_ai']
 
     recallm = RecallM()
-
+    recallm.reset_knowledge()
     if not args.reset:
         print(f'\r                                     ')
     ###     INITIALIZE     ##########################################################
